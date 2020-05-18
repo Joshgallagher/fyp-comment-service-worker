@@ -34,6 +34,7 @@
     "rxjs": "^6.5.3"
   },
   "devDependencies": {
+    "@golevelup/nestjs-testing": "^0.1.2",
     "@nestjs/cli": "^6.9.0",
     "@nestjs/schematics": "^6.7.0",
     "@nestjs/testing": "^6.7.1",

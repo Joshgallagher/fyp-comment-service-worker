@@ -22,6 +22,7 @@
   "dependencies": {
     "@golevelup/nestjs-rabbitmq": "^1.15.1",
     "@nestjs/common": "^6.7.2",
+    "@nestjs/config": "^0.4.2",
     "@nestjs/core": "^6.7.2",
     "@nestjs/platform-express": "^6.7.2",
     "amqp-connection-manager": "^3.2.0",

@@ -2,6 +2,8 @@ import { Module } from '@nestjs/common';
 import { WorkerService } from './worker.service';
 import { RabbitMQModule } from '@golevelup/nestjs-rabbitmq';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { MongooseModule } from '@nestjs/mongoose';
+import { Comment, CommentSchema } from './schemas/comment.schema';
 
 @Module({
   imports: [
@@ -22,6 +24,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
       }),
       inject: [ConfigService]
     }),
+    MongooseModule.forFeature([{ name: 'Comment', schema: CommentSchema, collection: 'comment' }])
   ],
   providers: [
     WorkerService

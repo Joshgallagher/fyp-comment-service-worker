@@ -24,7 +24,7 @@ import { Comment, CommentSchema } from './schemas/comment.schema';
       }),
       inject: [ConfigService]
     }),
-    MongooseModule.forFeature([{ name: 'Comment', schema: CommentSchema, collection: 'comment' }])
+    MongooseModule.forFeature([{ name: Comment.name, schema: CommentSchema, collection: 'comment' }])
   ],
   providers: [
     WorkerService

@@ -7,14 +7,14 @@ import { Comment } from './schemas/comment.schema';
 @Injectable()
 export class WorkerService {
     constructor(
-        @InjectModel('Comment')
+        @InjectModel(Comment.name)
         private readonly commentModel: Model<Comment>
     ) { }
 
     @RabbitSubscribe({
         exchange: 'article.exchange',
         routingKey: 'article.deleted',
-        queue: 'article-queue'
+        queue: 'comment-service-queue'
     })
     async deleteCommentsHandler(
         { id }: Record<string, number>

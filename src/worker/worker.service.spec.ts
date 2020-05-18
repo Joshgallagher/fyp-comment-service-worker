@@ -21,7 +21,7 @@ describe('WorkerService', () => {
         RabbitMQModule,
         WorkerService,
         {
-          provide: getModelToken('Comment'),
+          provide: getModelToken(Comment.name),
           useValue: {
             constructor: jest.fn(),
             deleteMany: jest.fn(),
